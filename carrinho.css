@@ -1,0 +1,155 @@
+/* ---------- ESTILO GERAL ---------- */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: #fdfafa;
+}
+
+/* ---------- CABEÇALHO ---------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    background-color: rgba(209, 209, 209, 0.5);
+
+    & a {
+        transform: scale(1.5);
+        color: #000000;
+        margin-top: 10px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-family: "Lobster Two", sans-serif;
+
+        & p{
+            font-size: 30px;
+            position: relative;
+            left: 40px;
+        }
+    }
+}
+
+header h1 {
+    font-family: "Lobster Two", sans-serif;
+    font-size: 40px;
+}
+
+nav {
+    background-color: rgba(209, 209, 209, 0.363);
+    font-family: "Lobster Two", sans-serif;
+    text-align: center;
+    padding: 12px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #2b2a2a;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ---------- PRODUTOS DO CARRINHO ---------- */
+main {
+    padding: 10%;
+}
+
+.carrinho-produtos {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.produto-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.produto-carrinho img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.produto-carrinho .info {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.produto-carrinho h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.preco {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.quantidade input {
+    width: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.remover {
+    background-color: #000000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ---------- TOTAL ---------- */
+.total {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.finalizar {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.finalizar:hover {
+    background-color: rgb(18, 236, 18);
+}
