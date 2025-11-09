@@ -17,25 +17,25 @@
 
     <title>Musclr</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-         <a href="#">Musclr</a>
+         <a href="">Musclr</a>
         <div class="search-bar">
             <img src="icons/serach.png" alt="search" class="search">
             <input type="text" placeholder="Pesquisar produtos...">
-            <a href="login.html"><img src="icons/perfil.png" alt="perfil" class="per"></a>
-            <a href="carrinho.html" class=" car"> <img src="icons/shop.png" alt="shop" class="shop"></a>
+            <a href="login"><img src="icons/perfil.png" alt="perfil" class="per"></a>
+            <a href="carrinho" class=" car"> <img src="icons/shop.png" alt="shop" class="shop"></a>
         </div>
     </header>
 
     <nav>
-        <a href="suple.html">Suplementos</a>
+        <a href="suple">Suplementos</a>
         <a href="#">Parcerias</a>
         <a href="#">Categorias</a>
-        <a href="equipamentos.html">Equipamentos</a>
+        <a href="equipamentos">Equipamentos</a>
     </nav>
 
     <main>
@@ -59,7 +59,7 @@
             <h1 class="tl">Ficar grande a qualquer custo!</h1>
 
             <div class="kv">
-                <img src="https://s2-ge.glbimg.com/ynLXTtTQ4BJjLOm4c4ojkUag-uA=/1280x0/filters:format(jpeg)/https://s02.video.glbimg.com/x720/12517761.jpg"
+                <img src="https://s2-ge.glbimg.com/ynLXTtTQ4BJjLOm4c4BJjLOm4c4ojkUag-uA=/1280x0/filters:format(jpeg)/https://s02.video.glbimg.com/x720/12517761.jpg"
                     alt="">
 
                 <h3>Muita gente quer resultado rápido e acaba caindo no uso de anabolizantes. Eles aumentam massa e

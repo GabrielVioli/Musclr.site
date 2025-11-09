@@ -11,7 +11,7 @@
     <div class="cadastro-container">
         <div class="cadastro-card">
             <h1>Cadastre-se</h1>
-            <form>
+            <form method="POST" action="/Musclr.site/Public/index.php">
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" placeholder="Digite seu nome" required>
 
