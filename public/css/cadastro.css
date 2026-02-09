@@ -1,0 +1,89 @@
+/* ---------- ESTILO GERAL ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ---------- CONTAINER DE CADASTRO ---------- */
+.cadastro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* ---------- CARD DE CADASTRO ---------- */
+.cadastro-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ---------- TITULO ---------- */
+.cadastro-card h1 {
+    font-family: 'Lobster Two', cursive;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #000;
+}
+
+/* ---------- FORMULÁRIO ---------- */
+.cadastro-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cadastro-card label {
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.cadastro-card input {
+    padding: 12px 15px;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+/* ---------- BOTÃO ---------- */
+.cadastro-card button {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* ---------- LINK PARA LOGIN ---------- */
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
