@@ -5,11 +5,10 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductsController;
 
 Route::middleware('auth')->group(function () {
-    Route::match(['get', 'post'], '/logout', [UserController::class, 'logout'])->name('logout');
+    Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
-    
-    Route::get('/produto/adicionar', [ProductsController::class, 'create'])->name('produto.adicionar');
-    Route::match(['get', 'post'],'/produto/adicionar/submit', [ProductsController::class, 'store'])->name('produto.adicionar');
+    Route::get('/produto/adicionar', [ProductsController::class, 'create'])->name('products.create');
+    Route::post('/produto/adicionar', [ProductsController::class, 'store'])->name('products.store');
 });
 
 Route::get('/login', [UserController::class, 'showLoginForm'])->name('login.form');

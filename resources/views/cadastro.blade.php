@@ -28,7 +28,7 @@
 
                 <button type="submit">Cadastrar</button>
             </form>
-            <p class="login-link">Já tem uma conta? <a href="{{ route('login') }}">Entre</a></p>
+            <p class="login-link">Já tem uma conta? <a href="{{ route('login.form') }}">Entre</a></p>
             <p style="margin-top: 10px;"><a href="{{ route('home') }}" style="text-decoration: none; color: #666; font-size: 0.8rem;">Voltar ao site</a></p>
         </div>
     </div>

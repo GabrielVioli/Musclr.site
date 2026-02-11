@@ -6,7 +6,7 @@
     <div class="form-container">
         <h1>Novo Produto</h1>
 
-        <form action="{{ route('produto/adicionar/submit') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             <div class="form-group">

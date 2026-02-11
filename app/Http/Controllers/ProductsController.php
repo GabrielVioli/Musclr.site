@@ -9,12 +9,11 @@ class ProductsController extends Controller
 {
     public function index()
     {
-        
     }
 
     public function create()
     {
-        return view('auth.adicionar');
+        return view('products.adicionar');
     }
 
     public function store(Request $request)
@@ -31,33 +30,29 @@ class ProductsController extends Controller
             $path = $request->file('image')->store('images', 'public');
             $data['urlImage'] = $path;
         } else {
-            return back()->withErrors(['image' => 'Erro no envio da imagem.']);
+            return back()->withErrors(['image' => 'Erro na imagem.']);
         }
 
         unset($data['image']);
 
         Product::create($data);
 
-        return redirect()->route('home')->with('success', 'Produto adicionado com sucesso!');
+        return redirect()->route('home')->with('success', 'Produto criado!');
     }
 
     public function show(string $id)
     {
-        
     }
 
     public function edit(string $id)
     {
-        
     }
 
     public function update(Request $request, string $id)
     {
-        
     }
 
     public function destroy(string $id)
     {
-        
     }
 }
