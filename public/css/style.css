@@ -133,6 +133,98 @@ main {
     box-sizing: border-box;
 }
 
+.titulo {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: "Lobster Two", sans-serif;
+    color: #111;
+    text-align: center;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.produto {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.produto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.produto img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.produto h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    font-weight: 600;
+    color: #111;
+    min-height: 50px;
+}
+
+.estrelas {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    margin-bottom: 10px;
+    color: gold;
+    font-size: 18px;
+}
+
+.preco {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #111;
+    margin: 10px 0 15px 0;
+    display: block;
+}
+
+.btn-card {
+    background-color: #02ff02;
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.btn-card:hover {
+    background-color: #00cc00;
+    transform: scale(1.02);
+}
+
 .form-container {
     background-color: #fff;
     padding: 40px;
@@ -163,11 +255,7 @@ main {
     font-size: 0.95rem;
 }
 
-.form-group input[type="text"],
-.form-group input[type="number"],
-.form-group input[type="url"],
-.form-group input[type="email"],
-.form-group input[type="password"],
+.form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
@@ -187,19 +275,10 @@ main {
     border-color: #02ff02;
 }
 
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
 input[type="file"] {
     background-color: #f9f9f9;
     padding: 10px;
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid #ddd;
     cursor: pointer;
-    box-sizing: border-box;
 }
 
 input[type="file"]::file-selector-button {
@@ -211,8 +290,6 @@ input[type="file"]::file-selector-button {
     margin-right: 15px;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    transition: background 0.3s;
 }
 
 input[type="file"]::file-selector-button:hover {
@@ -231,13 +308,12 @@ input[type="file"]::file-selector-button:hover {
     font-size: 1rem;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s;
     margin-top: 10px;
 }
 
 .btn-submit:hover {
     background-color: #00cc00;
-    transform: scale(1.02);
 }
 
 footer {

@@ -18,10 +18,11 @@ Route::post('/login/submit', [UserController::class, 'login'])->name('login');
 Route::post('/cadastro/submit', [UserController::class, 'cadastro'])->name('cadastro');
 
 
-
 Route::get('/', [UserController::class, 'index'])->name('home');
-Route::view('/suplementos', 'suple')->name('suplementos');
-Route::view('/equipamentos', 'equipamentos')->name('equipamentos');
+
+
+Route::get('/suplementos', [ProductsController::class, 'suplementos'])->name('suplementos');
+Route::get('/equipamentos', [ProductsController::class, 'equipamentos'])->name('equipamentos');
 
 
 Route::post('/carrinho', [UserController::class, 'carrinho'])->name('carrinho');

@@ -55,4 +55,15 @@ class ProductsController extends Controller
     public function destroy(string $id)
     {
     }
+    public function suplementos()
+{
+    $products = Product::where('category', 'suplementos')->get();
+    return view('suple', compact('products'));
+}
+
+public function equipamentos()
+{
+    $products = Product::where('category', 'equipamentos')->get();
+    return view('equipamentos', compact('products'));
+}
 }
