@@ -1,92 +1,81 @@
-/* ---------- ESTILO GERAL ---------- */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', Arial, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ece8e850;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
-/* ---------- CONTAINER DE LOGIN ---------- */
 .login-container {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
 }
 
-/* ---------- CARD DE LOGIN ---------- */
 .login-card {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 40px 30px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 350px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ---------- TITULO ---------- */
 .login-card h1 {
     font-family: 'Lobster Two', cursive;
-    margin-bottom: 30px;
-    font-size: 36px;
-    color: #000;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-/* ---------- FORMULÁRIO ---------- */
-.login-card form {
+form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.login-card label {
+label {
     text-align: left;
-    font-weight: 600;
-    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-left: 10px;
 }
 
-.login-card input {
-    padding: 12px 15px;
-    border-radius: 50px;
-    border: 1px solid #ddd;
-    outline: none;
-    font-size: 16px;
-    transition: 0.3s;
-}
-/* ---------- BOTÃO ---------- */
-.login-card button {
-    margin-top: 10px;
-    color: white;
-    background-color: rgb(0, 0, 0);
+input {
+    background-color: #f0eded;
     border: none;
-    padding: 12px 15px;
+    padding: 15px 20px;
     border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 16px;
+    margin-top: 10px;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.signup-link, .login-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.signup-link a, .login-link a {
+    color: black;
     font-weight: bold;
-    transition: 0.3s;
-}
-
-/* ---------- LINK DE CADASTRO ---------- */
-.signup-link {
-    margin-top: 15px;
-    font-size: 14px;
-}
-
-.signup-link a {
-    color: rgb(0, 0, 0);
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.signup-link a:hover{
-    color: rgb(26, 25, 25);
 }

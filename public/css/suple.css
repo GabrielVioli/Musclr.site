@@ -1,201 +1,89 @@
-/* ---------- ESTILO GERAL ---------- */
-body {
-    color: black;
-    font-family: "Poppins", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* ---------- CABEÇALHO ---------- */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 60px;
-    background-color: rgba(209, 209, 209, 0.5);
-    color: rgb(0, 0, 0);
-}
-
-header a {
-
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-family: "Lobster Two", sans-serif;
-    position: relative;
-    left: 40px;
-    font-size: 40px;
-}
-
-
-/* ---------- BARRA DE PESQUISA ---------- */
-.search-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    gap: 10px;
-}
-
-.search-bar input {
-    background-color: #ffffffc4;
-    padding: 9px 40px;
-    width: 250px;
-    border-radius: 80px;
-    border: none;
-    outline: none;
-}
-
-.search {
-    position: relative;
-    left: 40px;
-}
-
-/* ---------- ÍCONES ---------- */
-.car,
-.per {
-    opacity: 0.5;
-    transition: 0.3s;
-    z-index: 1;
-}
-
-.per:hover,
-.car:hover {
-    opacity: 1;
-    transition: 0.3s;
-}
-
-/* ---------- MENU DE NAVEGAÇÃO ---------- */
-nav {
-    background-color: rgba(209, 209, 209, 0.39);
-    font-family: "Lobster Two", sans-serif;
+/* Título da seção */
+.titulo-secao {
     text-align: center;
-    padding: 12px 0;
+    font-family: var(--font-title, cursive);
+    color: var(--primary-color, #d32f2f);
+    font-size: 2.5rem;
+    margin: 30px 0;
 }
 
-nav a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: 0.3s;
-    position: relative;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 2px;
-    background: rgb(43, 42, 42);
-    transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-/* ---------- CONTEÚDO PRINCIPAL ---------- */
-main {
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.titulo {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-    font-family: "Lobster Two", sans-serif;
-}
-
-/* ---------- GRID DE PRODUTOS ESTILO GET RAW ---------- */
-.produtos {
+/* O Grid Mágico (Responsivo) */
+.grid-produtos {
     display: grid;
+    /* Cria colunas automáticas com largura mínima de 250px */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
-    justify-items: center;
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
+    gap: 30px; /* Espaço entre os cards */
+    padding: 20px 0;
 }
 
-/* ---------- CARD DE PRODUTO ---------- */
-.produto {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* O Card do Produto */
+.card-produto {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
-    padding: 0px 20px 10px 10px;
-    width: 100%;
-    max-width: 250px;
+    justify-content: space-between; /* Empurra o botão pro final */
 }
 
-.produto:hover {
+.card-produto:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-/* ---------- IMAGEM ---------- */
-.produto img {
-    width: 100%;
-    height: 250px;
-    object-fit: contain;
+/* Container da Imagem (para padronizar tamanho) */
+.img-container {
+    height: 200px; /* Altura fixa para alinhar tudo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 
-.produto h3 {
+.img-container img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Garante que a imagem não estique */
+}
+
+/* Informações */
+.info h3 {
     font-size: 1.1rem;
-    margin: 10px 0 5px 0;
-    font-weight: 600;
-}
-
-.preco {
-    font-weight: bold;
-}
-
-button {
-    margin-top: auto;
-    background-color: rgb(2, 255, 2);
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    width: 100%;
-}
-
-button:hover {
-    background-color: rgb(18, 236, 18);
-}
-
-.cre {
-    img {
-        width: 200%;
-        position: relative;
-        right: 120px;
-    }
+    color: #333;
+    margin-bottom: 10px;
+    font-family: var(--font-body, sans-serif);
 }
 
 .estrelas {
-    display: flex;
-    gap: 2px;
-    margin-top: 10px;
+    color: #ffc107; /* Amarelo ouro */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
-.estrelas span {
-    font-size: 18px;
-    color: gold;
-    transition: transform 0.2s;
+.preco {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary-color, #d32f2f);
+    margin-bottom: 15px;
 }
 
-.estrelas .vazia {
-    color: #ddd;
+/* Botão "Ver Produto" */
+.btn-ver {
+    display: inline-block;
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: 100%;
 }
 
-.estrelas span:hover {
-    transform: scale(1.2);
-    cursor: pointer;
+.btn-ver:hover {
+    background-color: var(--primary-color, #d32f2f);
 }

@@ -1,37 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halteres 10kg - Musclr</title>
-    <link rel="stylesheet" href="halter.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&family=Poppins:wght@400;600&display=swap"
-        rel="stylesheet">
-</head>
+@section('title', 'Halteres 10kg - Musclr')
 
-<body>
-     <header>
-         <a href="index.html">Musclr</a>
-        <div class="search-bar">
-            <img src="icons/serach.png" alt="search" class="search">
-            <input type="text" placeholder="Pesquisar produtos...">
-            <a href="login.html"><img src="icons/perfil.png" alt="perfil" class="per"></a>
-            <a href="carrinho.html" class=" car"> <img src="icons/shop.png" alt="shop" class="shop"></a>
-        </div>
-    </header>
+@section('css')
+    <link rel="stylesheet" href="{{ asset('css/halter.css') }}">
+@endsection
 
-    <nav>
-        <a href="suple.html">Suplementos</a>
-        <a href="#">Parcerias</a>
-        <a href="#">Categorias</a>
-        <a href="equipamentos.html">Equipamentos</a>
-    </nav>
-
-    <main class="produto-container">
+@section('content')
+    <div class="produto-container">
         <div class="imagem-produto">
             <img src="https://maniakfitness.com/media/catalog/articles/64_carousel_1.webp" alt="Halteres 10kg">
         </div>
@@ -40,11 +16,7 @@
             <h1>Halteres 10kg</h1>
 
             <div class="estrelas">
-                <span class="cheia">★</span>
-                <span class="cheia">★</span>
-                <span class="cheia">★</span>
-                <span class="cheia">★</span>
-                <span class="vazia">★</span>
+                <span class="cheia">★</span><span class="cheia">★</span><span class="cheia">★</span><span class="cheia">★</span><span class="vazia">★</span>
             </div>
 
             <p class="preco">R$ 199,90</p>
@@ -63,9 +35,7 @@
             </ul>
 
             <button class="btn-carrinho">Adicionar ao carrinho 🛒</button>
-            <a href="equipamentos.html" class="voltar">← Voltar aos equipamentos</a>
+            <a href="{{ route('equipamentos') }}" class="voltar">← Voltar aos equipamentos</a>
         </div>
-    </main>
-</body>
-
-</html>
+    </div>
+@endsection
