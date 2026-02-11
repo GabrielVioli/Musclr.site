@@ -323,3 +323,8 @@ footer {
     padding: 20px;
     margin-top: auto;
 }
+
+.btn-ver-produto:hover {
+    background-color: #000;
+    color: #fff !important;
+}

@@ -40,9 +40,12 @@ class ProductsController extends Controller
         return redirect()->route('home')->with('success', 'Produto criado!');
     }
 
-    public function show(string $id)
-    {
-    }
+public function show($id)
+{
+    $product = Product::findOrFail($id);
+    
+    return view('produto', compact('product'));
+}
 
     public function edit(string $id)
     {

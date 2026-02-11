@@ -40,10 +40,16 @@
                     <p><a href="/produto/adicionar" class="btn-logout">Adicionar produto</a></p>
                 @endauth
 
-                <a href="{{ route('carrinho') }}" class="car"><img src="{{ asset('icons/shop.png') }}" alt="shop" class="shop" style="width: 24px;"></a>
+                <a href="{{ route('carrinho') }}" class="car"><img src="{{ asset('icons/shop.png') }}" alt="shop" class="shop" style="width: 24px; color='white'"></a>
             </div>
         </div>
     </header>
+
+    @if(session('success'))
+        <div class="alert-success" style="background-color: #02ff02; color: #000; padding: 15px; text-align: center; font-weight: bold; margin-bottom: 20px; border-radius: 8px;">
+            {{ session('success') }}
+        </div>
+    @endif
 
     <nav>
         <a href="{{ route('suplementos') }}">Suplementos</a>

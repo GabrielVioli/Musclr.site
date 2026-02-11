@@ -6,22 +6,23 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('table_carts', function (Blueprint $table) {
+        // MUDAMOS DE 'table_carts' PARA 'carts'
+        Schema::create('carts', function (Blueprint $table) {
             $table->id();
+            
+            // Colunas necessárias
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('product_id')->constrained()->onDelete('cascade');
+            $table->integer('quantity')->default(1);
+            
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('table_carts');
+        Schema::dropIfExists('carts');
     }
 };

@@ -19,6 +19,10 @@
                     
                     <span class="preco">R$ {{ number_format($product->price, 2, ',', '.') }}</span>
                     
+                    <a href="{{ route('products.show', $product->id) }}" class="btn-ver-produto" style="display: block; text-decoration: none; border: 2px solid #000; color: #000; padding: 10px; margin-bottom: 10px; border-radius: 8px; font-weight: bold; text-transform: uppercase; transition: 0.3s; text-align: center;">
+                        Ver Detalhes
+                    </a>
+                    
                     <form action="{{ route('carrinho') }}" method="POST">
                         @csrf
                         <button type="submit" class="btn-card">ADICIONAR AO CARRINHO</button>

@@ -9,6 +9,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/produto/adicionar', [ProductsController::class, 'create'])->name('products.create');
     Route::post('/produto/adicionar', [ProductsController::class, 'store'])->name('products.store');
+    Route::get('/produto/{id}', [ProductsController::class, 'show'])->name('products.show');
+    Route::get('/carrinho', [UserController::class, 'showCarrinho'])->name('carrinho.index');
 });
 
 Route::get('/login', [UserController::class, 'showLoginForm'])->name('login.form');
